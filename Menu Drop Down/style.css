@@ -1,0 +1,41 @@
+/* Menu Drop Down */
+/* CSS Styling */
+/* adjust values as needed */
+
+.menu-frame {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 22px;
+  width: 58px;
+  cursor: pointer;
+}
+
+.menu-frame::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  left: -10px;
+  right: -10px;
+}
+
+.menu {
+  display: none;
+  z-index: 1;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  background-color: white;
+}
+
+.menu-frame:hover .menu {
+  display: block;
+}
+
+.menu:first-child {
+  border-top: 1px solid black;
+}
+
+.menu:last-child {
+  border-bottom: 1px solid black;
+}
